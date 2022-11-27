@@ -6,6 +6,7 @@ router.use('/api', apiRoutes);
 
 router.use('/', frontEndRoutes);
 
+
 router.get("/session",(req,res)=>{
     res.json(req.session)
 })

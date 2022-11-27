@@ -1,6 +1,10 @@
 const User = require('./User');
-const Blog = require('./Blog');
+const Event = require('./Event');
 
-// User.hasMany(Blog);
+Event.belongsTo(User, {
+  onDelete: 'CASCADE'
+});
 
-module.exports = { User, Blog }
+User.hasMany(Event);
+
+module.exports = { User, Event };

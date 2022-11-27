@@ -2,8 +2,7 @@ const eventForm = document.querySelector("#newEventBtn");
 eventForm.addEventListener("submit",e=>{
     e.preventDefault();
     const projObj = {
-        location:document.querySelector("#eventLocation").value,
-        weather:document.querySelector("#eventWeather").value,
+        date:document.querySelector("#eventDate").value,
         description:document.querySelector("#eventDescription").value,
     }
 

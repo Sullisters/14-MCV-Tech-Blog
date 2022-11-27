@@ -6,8 +6,7 @@ newEvent.addEventListener("submit", async event => {
 
     const eventObj = {
         date: document.querySelector('#eventDate').value,
-        location: document.querySelector('#eventLocation').value,
-        weather: document.querySelector('#eventWeather').value,
+        title: document.querySelector('#eventTitle').value,
         description: document.querySelector('#eventDescription').value, 
         // eventURL 
     }

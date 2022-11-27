@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const bcrypt = require('bcrypt');
 
 router.get('/', (req, res) => {
   User.findAll().then(userData => {
@@ -24,6 +25,28 @@ router.post('/', (req, res) => {
     res.status(500).json({ err })
   })
 })
+
+// router.post('/login',(req,res)=>{
+//   User.findOne({
+//       where:{
+//           email:req.body.email
+//       }
+//   }).then(foundUser=>{
+//       if(!foundUser){
+//           return res.status(401).json({msg:'user not found'})
+//       }else if(!bcrypt.compareSync(req.body.password,foundUser.password)){
+//           return res.status(401).json({msg:'password incorrect'})
+//       }else{
+//           req.session.userId=foundUser.id;
+//           req.session.loggedIn=true;
+//           res.json(foundUser);
+//       }
+//   }).catch(err=>{
+//       console.log(err);
+//       res.status(500).json({err});
+//   })
+// })
+
 
 router.post('/login', async (req, res) => {
   try {
@@ -84,7 +107,6 @@ router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
-      console.log('You are now logged out')
     });
   } else {
     res.status(404).end();

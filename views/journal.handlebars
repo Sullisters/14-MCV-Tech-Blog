@@ -2,25 +2,13 @@
 
 <div class="journal-header">
     <div class="header-container">
-        <h4>{{event.location}}</h4> 
-        <h5>on {{event.date}}</h5>
-        <h5>The Weather Was {{event.weather}}</h5>
+        <h4>Title: {{event.title}}</h4>
+        <h5>Created: {{event.date}}</h5>
+        <h5>Created by: {{user.username}}</h5>
+        <h5>Contents: {{event.description}}</h5>
     </div>
 </div>
-<div class="api-section">
-    <form class="api-search row justify-content-center">
-        <input class="form-control w-50 opacity-75 mb-2" type="search" name="search" id="search-field" placeholder="Know your bird? Search for some cool facts!">
-        <div class="btn-group w-75 btn-group-sm">
-        <input class="btn btn-outline-light" type="submit" id="apiSubmitBtn" placeholder="Search">
-        <button class="refreshApibtn btn btn-outline-light" id="refreshApiBtn">Refresh Search</button>
-    </div>
     </form>
-    {{!-- this div exists to refresh the #apiDetails --}}
-    <div class="refresh-output">
-    {{!-- this is specifically for the api returned bird information --}}
-        <div id="apiDetails"></div>
-    </div>
-</div>
 
 <div class="container">
 {{> birdForm-details}}
@@ -38,10 +26,4 @@
         {{/each}}
     </div>  
 </section>
-
-<script src="/js/cloudinary2.js"></script>
-<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>  
-<script src="/js/animalsAPI.js" type="text/javascript"></script>
-
-<script src="/js/sighting-get.js"></script>
 
