@@ -29,5 +29,6 @@
 ## Tests
     N/A
     
-## Questions? Email me here:
-    Sullisters
+## Questions? find me here:
+   Github: Sullisters
+   Email: heatonpschreiber@gmail.com
