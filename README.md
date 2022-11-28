@@ -30,5 +30,5 @@
     N/A
     
 ## Questions? find me here:
-   Github: Sullisters
+   Github username: Sullisters
    Email: heatonpschreiber@gmail.com
