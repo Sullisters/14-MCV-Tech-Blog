@@ -24,10 +24,10 @@
     MIT
     
 ## Contributing
-    Feel free!
+    Feel free to contribute, I created this for my own use/experiment purposes
     
 ## Tests
-    N/A
+    There are no tests housed in this project.
     
 ## Questions? find me here:
    Github username: Sullisters
